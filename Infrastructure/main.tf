@@ -8,12 +8,7 @@ terraform {
       source = "Azure/azapi"
     }
   }
-  backend "azurerm" {
-    resource_group_name  = "control-automation"
-    storage_account_name = "autstorageaccount"
-    container_name       = "aut-tfstate"
-    key                  = "terraform.tfstate"
-  }
+
 }
 
 # Configure the Microsoft Azure Provider
