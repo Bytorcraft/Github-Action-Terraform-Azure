@@ -21,3 +21,9 @@ resource "azurerm_storage_container" "sc_aut_input" {
   storage_account_name  = azurerm_storage_account.sa_aut.name
   container_access_type = "private"
 }
+
+resource "azurerm_storage_container" "sc_aut_tfstate" {
+  name                  = "aut-tfstate"
+  storage_account_name  = azurerm_storage_account.sa_aut.name
+  container_access_type = "private"
+}
