@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "sa_aut" {
-  name                     = "autstorageaccount"
+  name                     = "minaya_storageaccount"
   resource_group_name      = azurerm_resource_group.rg_aut.name
   location                 = azurerm_resource_group.rg_aut.location
   account_tier             = "Standard"
