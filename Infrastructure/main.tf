@@ -8,12 +8,6 @@ terraform {
       source = "Azure/azapi"
     }
   }
-  backend "azurerm" {
-    resource_group_name  = "prueba"
-    storage_account_name = "strprueba"
-    container_name       = "tfstatefile"
-    key                  = "terraform.tfstate"
-  }
 }
 
 # Configure the Microsoft Azure Provider
