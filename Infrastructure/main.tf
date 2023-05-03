@@ -14,7 +14,7 @@ terraform {
     container_name       = "aut-tfstate"
     key                  = "terraform.tfstate"
     depends_on = [
-        azurerm_storage_container.sc_aut_tfstate
+      azurerm_storage_container.sc_aut_tfstate
     ]
   }
 }
