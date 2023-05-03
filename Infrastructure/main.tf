@@ -26,3 +26,8 @@ provider "azapi" {
 
 
 
+# Create a resource group
+resource "azurerm_resource_group" "rg_aut" {
+  name     = "control-automation"
+  location = "West Europe"
+}
