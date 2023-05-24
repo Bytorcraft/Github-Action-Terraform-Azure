@@ -28,16 +28,14 @@ resource "azurerm_network_interface" "aut_net_inter" {
 resource "azurerm_linux_virtual_machine" "aut_vm" {
   name                = "autvm"
   resource_group_name = azurerm_resource_group.rg_aut.name
-  admin_username      = "azureuser"
+  admin_username      = "adminuser"
+  admin_password      = "123123123a"
   location            = azurerm_resource_group.rg_aut.location
   size                = "Standard_B1ls"
 
   network_interface_ids = [azurerm_network_interface.aut_net_inter.id]
 
-  admin_ssh_key {
-    username   = "adminuser"
-    public_key = file("~/.ssh/id_rsa.pub")
-  }
+
 
   os_disk {
     caching              = "ReadWrite"
