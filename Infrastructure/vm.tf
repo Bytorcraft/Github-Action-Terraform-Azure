@@ -14,7 +14,7 @@ resource "azurerm_subnet" "aut_subnet" {
 }
 
 resource "azurerm_network_interface" "aut_net_inter" {
-  name                = aut_net_inter"
+  name                = "aut_net_inter"
   location            = azurerm_resource_group.rg_aut.location
   resource_group_name = azurerm_resource_group.rg_aut.name
 
@@ -24,6 +24,7 @@ resource "azurerm_network_interface" "aut_net_inter" {
     private_ip_address_allocation = "Dynamic"
   }
 }
+
 resource "azurerm_linux_virtual_machine" "aut_vm1" {
   name                = "aut_vm1"
   resource_group_name = azurerm_resource_group.rg_aut.name
