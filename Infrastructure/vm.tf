@@ -25,8 +25,8 @@ resource "azurerm_network_interface" "aut_net_inter" {
   }
 }
 
-resource "azurerm_linux_virtual_machine" "aut_vm1" {
-  name                = "aut_vm1"
+resource "azurerm_linux_virtual_machine" "aut_vm" {
+  name                = "aut_vm"
   resource_group_name = azurerm_resource_group.rg_aut.name
   admin_username      = "azureuser"
   location            = azurerm_resource_group.rg_aut.location
