@@ -34,6 +34,11 @@ resource "azurerm_linux_virtual_machine" "aut_vm" {
 
   network_interface_ids = [azurerm_network_interface.aut_net_inter.id]
 
+  admin_ssh_key {
+    username   = "adminuser"
+    public_key = file("~/.ssh/id_rsa.pub")
+  }
+  
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
