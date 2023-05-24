@@ -9,7 +9,7 @@ resource "azurerm_virtual_network" "aut_vnet" {
 resource "azurerm_subnet" "aut_subnet" {
   name                 = "aut_subnet"
   resource_group_name  = azurerm_resource_group.rg_aut.name
-  virtual_network_name = "azurerm_virtual_network.aut_vnet.name
+  virtual_network_name = azurerm_virtual_network.aut_vnet.name
   address_prefixes     = ["10.0.2.0/24"]
 }
 
