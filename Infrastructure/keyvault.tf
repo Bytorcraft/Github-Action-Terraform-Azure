@@ -28,5 +28,5 @@ resource "azurerm_key_vault_key" "aut_kvk" {
 
   depends_on = [ 
     azurerm_key_vault_access_policy.client
-   ]
+  ]
 }
