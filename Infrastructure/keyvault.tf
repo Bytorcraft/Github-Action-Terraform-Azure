@@ -25,7 +25,7 @@ resource "azurerm_key_vault_key" "aut_kvk" {
   key_type     = "RSA"
   key_size     = 2048
   key_opts     = ["decrypt", "encrypt", "sign", "unwrapKey", "verify", "wrapKey"]
-
+  
   depends_on = [ 
     azurerm_key_vault_access_policy.client,
   ]
