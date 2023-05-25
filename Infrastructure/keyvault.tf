@@ -1,4 +1,4 @@
-data "azurerm_client_config" "curret" {}
+data "azurerm_client_config" "current" {}
 
 resource "azurerm_key_vault" "aut_kv" {
   name                = "aut-storage-keyvault"
