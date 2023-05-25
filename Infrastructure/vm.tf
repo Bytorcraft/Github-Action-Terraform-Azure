@@ -47,6 +47,5 @@ resource "azurerm_linux_virtual_machine" "aut_vm" {
     offer     = "0001-com-ubuntu-server-focal"
     sku       = "20_04-lts-gen2"
     version   = "20.04.202209200"
- }
-
+  }
 }
