@@ -1,3 +1,5 @@
+data "azurerm_subscription" "primary" {}
+
 resource "azuread_application" "terraform" {
   display_name = "terraform"
 }
