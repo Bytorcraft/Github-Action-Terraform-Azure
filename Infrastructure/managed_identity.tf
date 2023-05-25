@@ -6,12 +6,6 @@ resource "azurerm_user_assigned_identity" "aut_ai" {
   resource_group_name = azurerm_resource_group.rg_aut.name
 }
 
-resource "azurerm_role_assignment" "ra_automation" {
-  scope                = azurerm_automation_account.aut_ac.id
-  role_definition_name = "Owner"
-  principal_id         = azurerm_user_assigned_identity.aut_ai.principal_id
-}
-
 resource "azurerm_role_assignment" "ra_subscription" {
   scope                = data.azurerm_subscription.primary.id
   role_definition_name = "Reader"
