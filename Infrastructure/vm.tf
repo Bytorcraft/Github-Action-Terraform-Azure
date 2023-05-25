@@ -26,13 +26,14 @@ resource "azurerm_network_interface" "aut_net_inter" {
 }
 
 resource "azurerm_linux_virtual_machine" "aut_vm" {
-  name                = "autvm"
-  resource_group_name = azurerm_resource_group.rg_aut.name
-  admin_username      = "adminuser"
-  admin_password      = "123123123Aa"
-  disable_password_authentication = "false"
-  location            = azurerm_resource_group.rg_aut.location
-  size                = "Standard_B1ls"
+
+  name                            = "autvm"
+  resource_group_name             = azurerm_resource_group.rg_aut.name
+  location                        = azurerm_resource_group.rg_aut.location
+  size                            = "Standard_B1ls"
+  admin_username                  = "adminuser"
+  admin_password                  = "123123123Aa"
+  disable_password_authentication = false
 
   network_interface_ids = [azurerm_network_interface.aut_net_inter.id]
 
