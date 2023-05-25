@@ -13,7 +13,7 @@ resource "azurerm_key_vault" "aut_kv" {
 resource "azurerm_key_vault_access_policy" "client" {
   key_vault_id = azurerm_key_vault.aut_kv.id
   tenant_id    = data.azurerm_client_config.current.tenant_id
-  object_id    = "51fb34ad-b9f1-4abf-af77-eeb33ed5d66a"
+  object_id    = "f5518914-1538-4f6d-ad15-83e9ef87004b"
 
   key_permissions    = ["Get", "Create", "Delete", "List", "Restore", "Recover", "UnwrapKey", "WrapKey", "Purge", "Encrypt", "Decrypt", "Sign", "Verify", "GetRotationPolicy"]
   secret_permissions = ["Get", "Set", "List", "Delete"]
@@ -22,7 +22,7 @@ resource "azurerm_key_vault_access_policy" "client" {
 resource "azurerm_key_vault_access_policy" "terraform" {
   key_vault_id = azurerm_key_vault.aut_kv.id
   tenant_id    = data.azurerm_client_config.current.tenant_id
-  object_id    = "d3fe0432-aa6b-412a-8026-974e27761344"
+  object_id    = "f5518914-1538-4f6d-ad15-83e9ef87004b"
 
   key_permissions    = ["Get", "Create", "Delete", "List", "Restore", "Recover", "UnwrapKey", "WrapKey", "Purge", "Encrypt", "Decrypt", "Sign", "Verify", "GetRotationPolicy"]
   secret_permissions = ["Get", "Set", "List", "Delete"]
