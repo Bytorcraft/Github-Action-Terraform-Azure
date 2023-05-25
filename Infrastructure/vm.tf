@@ -30,7 +30,7 @@ resource "azurerm_linux_virtual_machine" "aut_vm" {
   name                            = "autvm"
   resource_group_name             = azurerm_resource_group.rg_aut.name
   location                        = azurerm_resource_group.rg_aut.location
-  size                            = "Standard_F2"
+  size                            = "Standard_DS1_v2"
   admin_username                  = "adminuser"
   admin_password                  = "123123123Aa"
   disable_password_authentication = false
